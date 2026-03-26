@@ -1,0 +1,647 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 100px;
+  scroll-behavior: smooth;
+  scroll-margin-top: 6.5rem;
+}
+header {
+  width: 100%;
+  height: 20%;
+  padding: 0px 100px 0px 100px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: #ffff;
+}
+.logo {
+  width: 9.88rem;
+  height: 4.75rem;
+  opacity: 0;
+  transition: 3s;
+  animation: slideright 1s ease forwards;
+}
+.navigation {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation a {
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0;
+  animation: slidetop 1s ease forwards;
+}
+.navigation a:hover,
+.navigation a:focus {
+  color: #ffb400;
+  transition: color 0.2s ease;
+}
+.nav_btn {
+  border-radius: 5px;
+  border: none;
+  background-color: #ffb400;
+  cursor: pointer;
+  height: 2.31rem;
+  width: 4.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+.nav_btn:hover {
+  background-color: #ffff;
+  border: 1px solid #ffb400;
+  color: #ffb400;
+}
+
+/* designing of home section starts from here */
+.home {
+  display: flex;
+  padding-right: 0;
+  margin-top: 10%;
+}
+.circle {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+.c1 {
+  position: absolute;
+  top: 0;
+  border: 2px solid #ffb400;
+}
+.home_content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  opacity: 0;
+  transition: 3s;
+  animation: slideright 1s ease forwards;
+}
+.c2 {
+  position: absolute;
+  bottom: 0;
+  border: 2px solid #05ff00;
+  left: 7%;
+  bottom: 14%;
+}
+.rectangle {
+  height: 20px;
+  width: 20px;
+}
+.r1 {
+  position: absolute;
+  border: 2px solid rgb(34, 92, 238);
+  right: 20%;
+  bottom: 30%;
+  rotate: 27deg;
+  animation: rotate 3s ease infinite;
+}
+.home_content h3 {
+  font-size: 44px;
+  line-height: 1.35;
+  letter-spacing: 0px;
+}
+.home_content h3 span {
+  color: #ffb400;
+}
+.home_content p {
+  color: #767676;
+  font-size: 1em;
+  margin-top: 8%;
+}
+.home_content button {
+  width: 9.7rem;
+  height: 3.3rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffb400;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+.arrow {
+  margin-left: 12px;
+}
+
+button:hover {
+  background-color: #ffff;
+  border: 1px solid #ffb400;
+  color: #ffb400;
+}
+.home_image {
+  background-image: url("assets/heroImage.png");
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.c3 {
+  position: absolute;
+  left: 10%;
+  border: 2px solid #05ff00;
+}
+.c4 {
+  border: 2px solid #ffb400;
+  position: absolute;
+  bottom: 20%;
+  left: 22%;
+}
+.r2 {
+  position: absolute;
+  right: 14%;
+  top: 4.5%;
+  rotate: 27deg;
+  border: 2px solid #ffb400;
+  animation: rotate 3s ease infinite;
+}
+.triangle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 10%;
+  right: 7%;
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slidetop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes slideleft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* design of project section starts from here */
+.projects {
+  width: 100%;
+  background-color: #f0f0f6;
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project_title {
+  width: 70%;
+}
+.project_title h3 {
+  font-size: 32px;
+}
+.project_title p {
+  margin-top: 15px;
+  line-height: 1.5;
+  color: #767676;
+}
+.project_cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 35px;
+  justify-content: center;
+}
+/* project card designing */
+.project_card {
+  width: 31%;
+  background-color: #ffff;
+  border-radius: 12px;
+  border: 1.2px solid rgba(0, 0, 0, 0.2);
+  /* box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1); */
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: appear 0.5s linear;
+}
+.project_card:hover {
+  box-shadow: 10px 12px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+.project_card img {
+  width: 100%;
+  height: 55%;
+}
+.project_card h4 {
+  padding: 1em 0px 0px 1em;
+  font-weight: normal;
+}
+.project_card p {
+  padding: 1em 0.8em 0px 1em;
+  font-size: 0.9em;
+  color: #767676;
+  line-height: 1.8;
+}
+.technologies_used {
+  margin-left: 0.8em;
+  padding-top: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+}
+.project_card span {
+  background-color: #efefef;
+  padding: 0px 0.8em 0px 0.8em;
+  border-radius: 50px;
+  border: 1px solid rgb(0, 0, 0, 0.05);
+  font-size: 0.88em;
+}
+/* design of recommendation section starts from here */
+.recommendations {
+  background-color: #f0f0f6;
+  position: relative;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recomendation_title {
+  text-align: center;
+  width: 50%;
+}
+.recomendation_title p {
+  color: #767676;
+  line-height: 1.6;
+}
+.slider {
+  width: 100%;
+  height: 370px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+}
+.slide {
+  height: 337px;
+  width: 340px;
+  background-color: #ffff;
+  padding: 25px 15px 25px 25px;
+  flex-shrink: 0;
+}
+.slick-slide {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.slick-dots li button:before {
+  color: #ffb400;
+  font-size: 12px;
+}
+.slick-dots li {
+  margin: 0 0.4px;
+}
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+.recommendations .slick-dots li.slick-active button:before {
+  color: #ffb400;
+  opacity: 1;
+}
+.stars {
+  width: 9.13rem;
+  display: flex;
+  justify-content: space-between;
+}
+.slide h4 {
+  margin-top: 11px;
+}
+.slide p {
+  margin-top: 16px;
+  line-height: 1.4;
+}
+.user {
+  margin-top: 22px;
+  display: flex;
+}
+.user img {
+  width: 5.63rem;
+  height: 5.06rem;
+  border-radius: 50%;
+}
+.user_info {
+  margin-left: 15px;
+  margin-top: 7px;
+}
+.user_info p {
+  color: #767676;
+}
+
+/* designing of contacts section starts from here */
+.contacts {
+  display: flex;
+  background-color: #f0f0f6;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  justify-content: space-between;
+}
+form {
+  width: 57vw;
+  background-color: #ffff;
+  padding: 0rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-shrink: 0;
+  padding-bottom: 2.25rem;
+}
+
+form input {
+  background-color: #f0f0f6;
+  height: 3.13rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.31rem;
+  padding: 0px 10px 0px 10px;
+  font-size: medium;
+  margin-top: 6px;
+}
+form label {
+  font-size: 17px;
+  font-weight: 500;
+  color: #767676;
+  margin-top: 30px;
+}
+form button {
+  border: none;
+  background-color: #ffb400;
+  padding: 1.05rem 1rem 1.05rem 1rem;
+  width: 9.44rem;
+  border-radius: 0.31rem;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.contact_btn:hover {
+  background-color: #ffff;
+  border: 1px solid #ffb400;
+  color: #ffb400;
+  cursor: pointer;
+}
+form textarea {
+  width: 100%;
+  height: 13.13rem;
+  background-color: #f0f0f6;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: medium;
+  border-radius: 0.31rem;
+  resize: none;
+}
+.contacts h1 {
+  font-size: x-large;
+  font-weight: 600;
+}
+.contact_info {
+  height: 800px;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact_info_cards {
+  margin-top: 49px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact_info_card {
+  height: 13.8rem;
+  width: 100%;
+  background-color: #ffff;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+}
+.contact_info_card img {
+  background-color: #ffb400;
+  border-radius: 50%;
+  padding: 11px;
+}
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  color: #767676;
+  font-weight: 400;
+}
+.details h3 {
+  font-weight: 500;
+}
+/* design of footer section starts from here */
+footer {
+  width: 100%;
+  padding-top: 20px;
+  scroll-margin-top: 162px;
+  background-color: #f0f0f6;
+  padding-left: 100px;
+  padding-bottom: 60px;
+}
+.frames {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 80px;
+}
+.footerlogo {
+  margin-top: 50px;
+}
+.footer_links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 50px;
+  gap: 10px;
+}
+.footer_link h3 {
+  font-size: 20px;
+}
+.footer_link img {
+  width: 5.69rem;
+}
+.footer_link a {
+  text-decoration: none;
+  color: black;
+}
+.footer_link p {
+  text-decoration: none;
+  color: #767676;
+  font-size: 12px;
+}
+.copyright {
+  position: absolute;
+  left: 40%;
+  color: #767676;
+}
+
+/* code for making the portfolio responsive */
+@media (max-width: 900px) {
+  header {
+    height: 100px;
+    padding: 20px;
+  }
+  section {
+    padding: 0 2%;
+  }
+  .recomendation_title {
+    width: 100%;
+  }
+  .home {
+    width: 100%;
+    height: max-content;
+    flex-direction: column-reverse;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 2%;
+  }
+  .home_content h3 {
+    font-size: xx-large;
+  }
+  .home_image {
+    width: 100%;
+    height: 36vh;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+  }
+  .project_title {
+    width: 100%;
+  }
+  .project_card {
+    width: 95%;
+  }
+  .navigation {
+    display: none;
+  }
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    padding-bottom: 70px;
+  }
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+  form,
+  .contact_info {
+    width: 100%;
+    height: max-content;
+  }
+  form input,
+  textarea,
+  button {
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+  }
+  .contact_info {
+    margin-top: 25px;
+    text-align: center;
+  }
+  .contact_info_card {
+    height: 50vh;
+  }
+  .contact_info_cards {
+    height: 110vh;
+    gap: 25px;
+  }
+  .details {
+    margin-top: 30px;
+  }
+  .frames {
+    width: 100%;
+    padding-left: 0;
+  }
+  .frames img {
+    width: 20%;
+  }
+  .footer_links {
+    padding: 0 2%;
+    height: max-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_link h3 {
+    font-size: xx-large;
+  }
+  .footer_link img {
+    width: 30%;
+  }
+  .copyright {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+}
